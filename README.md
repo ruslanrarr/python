@@ -1,0 +1,2 @@
+# python
+Заметки для Python
