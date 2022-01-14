@@ -1,0 +1,21 @@
+import pandas as pd
+import pyodbc 
+import sys
+
+
+server = 'NAMESERVER'
+db = 'DataBase'
+
+conn  =  pyodbc . connect ( 'DRIVER={SQL Server};SERVER='  +  server  +  ';DATABASE='  +  db  +  ';Trusted_Connection=yes' )
+
+
+sql  =  """ 
+
+select  top 5 *
+from oborot
+
+"""
+
+
+df = pd.read_sql(sql, conn)
+df.head()
