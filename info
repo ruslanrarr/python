@@ -1,0 +1,8 @@
+import pandas as pd                                                             # Импорт библиотеки pandas
+df = pd.read_excel("/Users/RRRahimzhanov/Desktop/Python project/test.xlsx")     # загружаем из файла
+df.head()                                                                       # вызываем таблицу ( 5 первых строк)
+df.describe(include = "all")                                                    # Вывели информаци по всем столбцам
+df.shape                                                                        #данные по датасету
+df.dropna(inplace = True)                                                       #Удалили где пустые значения
+df[['Пол','Имя']]                                                               #Выводим два столбца
+df.Имя                                                                          #Выводим один столбец
